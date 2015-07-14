@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZqM-XR-CxE">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blo-7g-9xd">
+                                <rect key="frame" x="266" y="285" width="57" height="30"/>
+                                <state key="normal" title="PayNow">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="payNow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DSd-CX-f4i"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sxP-UO-nUv">
+                                <rect key="frame" x="281" y="232" width="25" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="sxP-UO-nUv" secondAttribute="centerY" constant="53" id="4g7-FQ-3Ak"/>
+                            <constraint firstAttribute="centerX" secondItem="sxP-UO-nUv" secondAttribute="centerX" constant="6" id="FTd-HD-fq8"/>
+                            <constraint firstAttribute="centerY" secondItem="Blo-7g-9xd" secondAttribute="centerY" id="PJF-bi-fDX"/>
+                            <constraint firstAttribute="centerX" secondItem="Blo-7g-9xd" secondAttribute="centerX" constant="5.5" id="hTO-JW-Lif"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="abZ-W8-Dlq"/>
+                    <connections>
+                        <outlet property="cardNumber" destination="sxP-UO-nUv" id="P4Q-Kz-wnj"/>
+                        <outlet property="payNowBtn" destination="Blo-7g-9xd" id="FNf-as-cmm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="136"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="B5n-JV-07P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZqM-XR-CxE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lik-et-sSX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PDA-A1-Qpd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qec-wP-xm1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="-557"/>
+        </scene>
+    </scenes>
+</document>
